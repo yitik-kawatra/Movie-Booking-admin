@@ -22,9 +22,8 @@ const SigninPage = () => {
         const data = await response.json();
         // Handle successful login, e.g., store adminAuthToken in a secure way
         console.log('Admin login successful', data);
-
         toast.success('Admin Login Successful', {
-          position: toast.POSITION.TOP_CENTER,
+          position: "top-center",
         });
         window.location.href = '/pages/movie/createmovie';
 
@@ -32,7 +31,7 @@ const SigninPage = () => {
         // Handle login error
         console.error('Admin login failed', response.statusText);
         toast.error('Admin Login Failed', {
-          position: toast.POSITION.TOP_CENTER,
+          position: "top-center",
         });
       }
     }
